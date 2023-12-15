@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Independence Day Celebration</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            padding: 20px;
+            text-align: center;
+            color: #ecf0f1;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        #dynamic-content {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #3498db;
+        }
+
+        #image-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            text-decoration: none;
+            background-color: #e74c3c;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        #cta-button:hover {
+            background-color: #c0392b;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            padding: 10px;
+            text-align: center;
+            color: #ecf0f1;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Independence Day Celebration</h1>
+</header>
+
+<main>
+    <div id="dynamic-content">
+        <p id="greeting"></p>
+    </div>
+
+    <div id="image-container">
+        <img id="independence-image" src="Independence Day.jpg" alt="Independence Day">
+    </div>
+
+    <a href="#" id="cta-button">Join the Celebration</a>
+</main>
+
+<footer>
+    <p>&copy; 2023 Independence Day Celebration</p>
+</footer>
+
+<script>
+    // Dynamic content based on the time of day
+    const currentTime = new Date().getHours();
+    const greetingElement = document.getElementById('greeting');
+
+    if (currentTime < 12) {
+        greetingElement.textContent = 'Good morning! Happy Independence Day!';
+    } else if (currentTime < 18) {
+        greetingElement.textContent = 'Good afternoon! Happy Independence Day!';
+    } else {
+        greetingElement.textContent = 'Good evening! Happy Independence Day!';
+    }
+</script>
+
+</body>
+</html>
